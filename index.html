@@ -2,8 +2,14 @@
 
 <head>
     <title>CS412 Project 5 - Coffee shop</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!--Adding map-->
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjseuT8Su57E7Y4TPvszP8m2ifYMDzNjE&callback=initMap&libraries=&v=weekly"
+        defer>
+    </script>
     <!--Adding jQuery-->
 
     <script src="scripts/jquery-3.5.1.js"></script>
@@ -12,6 +18,7 @@
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/styles.css" />
     <script src="scripts/app.js"></script>
+    <script src="scripts/googlemap.js"></script>
 </head>
 
 <body data-spy="scroll" data-target=".navbar">
@@ -22,30 +29,35 @@
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item px-5" id="ed">
                         <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item px-5">
+                        <a class="nav-link" href="menu.html">
+                            Menu
+                        </a>
+                    </li>
+                    <li class="nav-item px-5">
                         <a class="nav-link" href="#about_us">About us</a>
                     </li>
                     <li class="nav-item px-5">
-                        <a class="nav-link" href="#contact">Contact us</a>
+                        <a class="nav-link" href="contact.html">Contact us</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </section>
-    <section class="header">
+    <section class="header my-5">
         <div id="background">
         </div>
     </section>
 
-    <section id="text" class=container">
-        <h1>
-            Header
-        </h1>
+    <section class="container" id="text">
+        <h3 id="about_us">
+            About us
+        </h3>
         <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic sequi quis, expedita accusamus harum
             dignissimos quam quod mollitia, numquam, necessitatibus a aperiam dicta assumenda possimus rem blanditiis
@@ -63,22 +75,146 @@
             cumque dignissimos cum perferendis deleniti dolore ad quo consectetur. Cum voluptas labore eos
             exercitationem enim debitis repellendus itaque non, soluta molestiae velit, alias laborum quasi excepturi?
         </p>
-        <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum assumenda odio ut nisi a laudantium provident
-            reiciendis deserunt velit. Molestias, iure, magnam sunt aut asperiores, unde est obcaecati reprehenderit
-            totam inventore fuga vel tenetur odio modi at. Provident cumque ratione ea illo facere necessitatibus
-            quibusdam pariatur reprehenderit maxime dicta! Delectus, doloribus quaerat? Ad sint id beatae tenetur. Quasi
-            ex architecto at molestiae tempore, libero esse voluptate tempora debitis ad quia nobis temporibus
-            consectetur consequatur fugiat minus doloremque delectus. Quas voluptatum nesciunt laborum ratione quos,
-            modi amet maiores atque cupiditate doloremque tempora, ducimus harum, ipsum molestias. Itaque doloremque
-            animi eius, nostrum sint eligendi nihil, aliquid est reprehenderit delectus corporis accusantium id non?
-            Unde repellat accusantium doloribus provident voluptate cum totam nulla. Quos illo dolorem repellendus nobis
-            beatae, doloremque, error recusandae laborum a voluptate laudantium ea animi porro ab? Ullam, necessitatibus
-            id. Sapiente harum consequatur, facere, magnam corrupti nisi at fuga necessitatibus explicabo iste ratione
-            illo quisquam esse? Unde, laboriosam quas! Iste enim nemo est sequi veniam similique error, repellat
-            molestias officia ducimus iure amet reiciendis. Velit repellat suscipit numquam nam sint, mollitia illo
-            vitae unde ea molestiae sequi cupiditate fuga? Placeat reiciendis veritatis temporibus eveniet at vel
-            sapiente, nostrum omnis optio.
-        </p>
     </section>
+    <section class="container my-5">
+        <div class="row">
+            <div class="col">
+                <img src="images/img1.jpg" alt="" height="400px">
+            </div>
+            <div class="col" id="menu">
+                <h3>
+                    Menus1
+                </h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur odit cupiditate,
+                    temporibus
+                    eaque
+                    harum optio non molestias numquam at, asperiores quas ipsa soluta cumque veniam!
+                    Fugiat
+                    neque
+                    nihil
+                    debitis praesentium! Sunt a maxime saepe beatae accusamus hic nostrum deserunt, sit
+                    eos id,
+                    quia
+                    qui
+                    minus iusto aut eius, tenetur delectus.
+                </p>
+                <button class="btn btn-primary">MENUS</button>
+            </div>
+        </div>
+
+    </section>
+    <br>
+
+    <section class="container my-5">
+        <div class="row">
+            <div class="col" id="menu">
+                <h3>
+                    Menus2
+                </h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur odit cupiditate,
+                    temporibus
+                    eaque
+                    harum optio non molestias numquam at, asperiores quas ipsa soluta cumque veniam!
+                    Fugiat
+                    neque
+                    nihil
+                    debitis praesentium! Sunt a maxime saepe beatae accusamus hic nostrum deserunt, sit
+                    eos id,
+                    quia
+                    qui
+                    minus iusto aut eius, tenetur delectus.
+                </p>
+                <button class="btn btn-primary">MENUS</button>
+            </div>
+            <div class="col">
+                <img src="images/img1.jpg" alt="" height="400px">
+            </div>
+        </div>
+        <div class="container my-5">
+            <h2>
+                Contact us
+            </h2>
+            <button class="btn btn-primary">Contact</button>
+        </div>
+
+        <section class="container my-5">
+            <div class="row">
+                <div class="col">
+                    <h3>
+                        Location
+                    </h3>
+                    <div id="map"></div>
+                </div>
+                <div class="col">
+                    <h3>
+                        Open hours
+                    </h3>
+
+                    <ul style="list-style-type: none; font-size: 1.2em;">
+                        <li>Monday <span style="justify-content: end;">9-21</span></li>
+                        <li>Tuesday <span class="justify-content-end">9-21</span></li>
+                        <li style="justify-content: flex-end;">Wednesday <span>9-21</span></li>
+                        <li>Thursday <span>9-21</span></li>
+                        <li class="text-right">Friday <span>9-21</span> </li>
+                        <li>Saturday <span class="text-right">9-21</span></li>
+                        <li>Sunday <span>9-21</span></li>
+                    </ul>
+                </div>
+                <div class="col-5">
+                    <h3 class="text-center">
+                        Check us out on social media
+                    </h3>
+                    <ul class="row justify-content-center" style="list-style-type: none;">
+                        <li>
+                            <a class="px-3" href="https://www.facebook.com/fejsal.perva.5"><img
+                                    src="images/facebook.png" alt="Facebook icon" srcset=""></a>
+                        </li>
+                        <li>
+                            <a class="px-3" href="https://www.instagram.com/fejsalperva/"><img
+                                    src="images/instagram.png" alt="Instagram icon" srcset=""></a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+        <div class="container  my-5">
+            <h3>
+                Terms and conditions
+            </h3>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum assumenda odio ut nisi a laudantium
+                provident
+                reiciendis deserunt velit. Molestias, iure, magnam sunt aut asperiores, unde est obcaecati reprehenderit
+                totam inventore fuga vel tenetur odio modi at. Provident cumque ratione ea illo facere necessitatibus
+                quibusdam pariatur reprehenderit maxime dicta! Delectus, doloribus quaerat? Ad sint id beatae tenetur.
+                Quasi
+                ex architecto at molestiae tempore, libero esse voluptate tempora debitis ad quia nobis temporibus
+                consectetur consequatur fugiat minus doloremque delectus. Quas voluptatum nesciunt laborum ratione quos,
+                modi amet maiores atque cupiditate doloremque tempora, ducimus harum, ipsum molestias. Itaque doloremque
+                animi eius, nostrum sint eligendi nihil, aliquid est reprehenderit delectus corporis accusantium id non?
+                Unde repellat accusantium doloribus provident voluptate cum totam nulla. Quos illo dolorem repellendus
+                nobis
+                beatae, doloremque, error recusandae laborum a voluptate laudantium ea animi porro ab? Ullam,
+                necessitatibus
+                id. Sapiente harum consequatur, facere, magnam corrupti nisi at fuga necessitatibus explicabo iste
+                ratione
+                illo quisquam esse? Unde, laboriosam quas! Iste enim nemo est sequi veniam similique error, repellat
+                molestias officia ducimus iure amet reiciendis. Velit repellat suscipit numquam nam sint, mollitia illo
+                vitae unde ea molestiae sequi cupiditate fuga? Placeat reiciendis veritatis temporibus eveniet at vel
+                sapiente, nostrum omnis optio.
+            </p>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+            integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous">
+        </script>
 </body>
