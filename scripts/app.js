@@ -35,4 +35,8 @@ $(document).ready(function () {
       headerBg.style.top = +window.pageYOffset+'px';
       //headerBg.style.backgroundPositionY = +window.pageYOffset+'px';
     })
+
+    $(function () {
+      $('[data-toggle="popover"]').popover()
+      })
 });
