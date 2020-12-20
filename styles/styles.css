@@ -53,3 +53,7 @@ height: 400px;
  width: 400px;
    /* The width is the width of the web page */
 }
+.btn:hover {
+  color: white;
+  background-color: black;
+}
