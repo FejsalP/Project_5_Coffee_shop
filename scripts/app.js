@@ -16,27 +16,11 @@ $(document).ready(function () {
       last_scroll_top = scroll_top;
     });
   }
-/*
-  var headerBackground = $("#background");
-  window.addEventListener("scroll", function(){
-            $("#background").style.opacity = 1 - +window.pageYOffset/550+'';
-      $("#background").style.top = +window.pageYOffset+'px';
-
-  })
-  window.on("scroll", function(){
-      $("#background").style.opacity = 1 - +window.pageYOffset/550+'';
-      $("#background").style.top = +window.pageYOffset+'px';
-  })*/
-
-
+  //parallax, header
   var headerBg = document.getElementById('background');
   window.addEventListener("scroll", function(){
       headerBg.style.opacity = 1 - +window.pageYOffset/700+'';
       headerBg.style.top = +window.pageYOffset+'px';
       //headerBg.style.backgroundPositionY = +window.pageYOffset+'px';
     })
-
-    $(function () {
-      $('[data-toggle="popover"]').popover()
-      })
 });
