@@ -55,17 +55,16 @@
       </p>
       <div class="row">
         <div class="col">
-          <form action="index.html" id="contact_form" name="contact_form">
-
+          <form action="contact.php" id="contact_form" name="contact_form" method="POST">
 
             <div class="row">
 
               <div class="col-3">
-                <input type="text" class="form-control" id="first_name">
+                <input type="text" class="form-control" name="first_name" id="first_name">
                 <label for="first_name">First name</label>
               </div>
               <div class="col-3">
-                <input type="text" class="form-control" id="last_name">
+                <input type="text" class="form-control" name="last_name" id="last_name">
                 <label for="last_name">Last name</label>
               </div>
               <div class="col">
@@ -85,7 +84,7 @@
             <div class="row">
               <div class="col-6">
                 <div class="md-form">
-                  <input type="email" id="email_form" class="form-control">
+                  <input type="email" id="email_form" name="email" class="form-control">
                   <label for="email_form">E-mail</label>
                 </div>
               </div>
@@ -109,7 +108,7 @@
               </div>
               <div class="col-3">
                 <div class="form-group">
-                  <select id="inputState" class="form-control">
+                  <select id="inputState" name="reason" class="form-control">
                     <option selected></option>
                     <option>Business</option>
                     <option>Suggestion</option>
@@ -141,11 +140,12 @@
               <div class="col-8">
                 <div class="form-group">
                   <label for="exampleFormControlTextarea1">Content</label>
-                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                  <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="4"></textarea>
                 </div>
               </div>
 
             </div>
+            <button type="submit" class="btn btn-light">Submit</button>
           </form>
         </div>
       </div>
